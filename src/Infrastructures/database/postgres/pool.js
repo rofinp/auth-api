@@ -2,25 +2,46 @@
 
 const { Pool } = require('pg');
 
-const testConfig = {
-  host: process.env.PGHOST_TEST,
-  post: process.env.PGPORT_TEST,
-  user: process.env.PGUSER_TEST,
-  password: process.env.PGPASSWORD_TEST,
-  database: process.env.PGDATABASE_TEST,
-};
+// OLD CODE
+// const testConfig = {
+//   host: process.env.PGHOST_TEST,
+//   port: process.env.PGPORT_TEST,
+//   user: process.env.PGUSER_TEST,
+//   password: process.env.PGPASSWORD_TEST,
+//   database: process.env.PGDATABASE_TEST,
+// };
 
-const prodConfig = {
-  host: process.env.PGHOST,
-  post: process.env.PGPORT,
-  user: process.env.PGUSER,
-  password: process.env.PGPASSWORD,
-  database: process.env.PGDATABASE,
+// const prodConfig = {
+//   host: process.env.PGHOST,
+//   port: process.env.PGPORT,
+//   user: process.env.PGUSER,
+//   password: process.env.PGPASSWORD,
+//   database: process.env.PGDATABASE,
+// };
+
+const poolConfig = {
+  test: {
+    host: process.env.PGHOST_TEST,
+    port: process.env.PGPORT_TEST,
+    user: process.env.PGUSER_TEST,
+    password: process.env.PGPASSWORD_TEST,
+    database: process.env.PGDATABASE_TEST,
+  },
+  production: {
+    host: process.env.PGHOST,
+    port: process.env.PGPORT,
+    user: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
+  },
 };
 
 // const pool = process.env.NODE_ENV === 'test' ? new Pool(testConfig) : new Pool();
 
-const pool = new Pool(process.env.NODE_ENV === 'test' ? testConfig : prodConfig);
+// const pool = new Pool(process.env.NODE_ENV === 'test' ? testConfig : prodConfig);
+
+// If NODE_ENV is not set, it defaults to 'production'.
+const pool = new Pool(poolConfig[process.env.NODE_ENV || 'production']);
 
 module.exports = pool;
 
