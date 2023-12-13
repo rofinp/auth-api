@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702449047997" clover="3.2.0">
-  <project timestamp="1702449047997" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2" elements="15" coveredelements="15" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
+<coverage generated="1702449575734" clover="3.2.0">
+  <project timestamp="1702449575734" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3" elements="20" coveredelements="20" complexity="0" loc="14" ncloc="14" packages="1" files="3" classes="3"/>
+    <file name="AuthenticationError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/AuthenticationError.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+    </file>
     <file name="ClientError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/ClientError.js">
       <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
     </file>
     <file name="InvariantError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/InvariantError.js">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
