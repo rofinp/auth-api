@@ -1,7 +1,7 @@
 const AuthenticationError = require('../AuthenticationError');
 
 describe('AuthenticationError', () => {
-  it('should create AuthenticationError correctly', () => {
+  it('should create an AuthenticationError correctly', () => {
     const authenticationError = new AuthenticationError('error during authentication');
 
     expect(authenticationError.statusCode).toEqual(401);
