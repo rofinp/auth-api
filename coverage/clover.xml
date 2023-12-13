@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702469730143" clover="3.2.0">
-  <project timestamp="1702469730143" name="All files">
-    <metrics statements="30" coveredstatements="30" conditionals="17" coveredconditionals="17" methods="5" coveredmethods="5" elements="52" coveredelements="52" complexity="0" loc="30" ncloc="30" packages="2" files="5" classes="5"/>
+<coverage generated="1702470367733" clover="3.2.0">
+  <project timestamp="1702470367733" name="All files">
+    <metrics statements="32" coveredstatements="32" conditionals="17" coveredconditionals="17" methods="6" coveredmethods="6" elements="55" coveredelements="55" complexity="0" loc="32" ncloc="32" packages="2" files="5" classes="5"/>
     <package name="Commons.exceptions">
       <metrics statements="18" coveredstatements="18" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
       <file name="AuthenticationError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/AuthenticationError.js">
@@ -36,21 +36,23 @@
       </file>
     </package>
     <package name="Domains.users.entities">
-      <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
       <file name="RegisterUser.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/RegisterUser.js">
-        <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
-        <line num="3" count="5" type="cond" truecount="5" falsecount="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="7" count="4" type="cond" truecount="5" falsecount="0"/>
+        <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="5" type="cond" truecount="5" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="5" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
       </file>
     </package>
   </project>
