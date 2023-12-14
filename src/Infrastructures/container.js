@@ -3,7 +3,7 @@
 
 const { createContainer } = require('instances-container');
 
-// external agency
+// external tools/agencies
 const nanoid = require('nanoid');
 const bcrypt = require('bcrypt');
 const pool = require('./database/postgres/pool');
