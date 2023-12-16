@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702719363051" clover="3.2.0">
-  <project timestamp="1702719363051" name="All files">
+<coverage generated="1702734719107" clover="3.2.0">
+  <project timestamp="1702734719107" name="All files">
     <metrics statements="111" coveredstatements="111" conditionals="32" coveredconditionals="32" methods="25" coveredmethods="25" elements="168" coveredelements="168" complexity="0" loc="111" ncloc="111" packages="9" files="16" classes="16"/>
     <package name="Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -17,8 +17,8 @@
         <line num="1" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
         <line num="17" count="2" type="stmt"/>
@@ -35,26 +35,26 @@
       </file>
       <file name="ClientError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/ClientError.js">
         <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="3" count="17" type="stmt"/>
-        <line num="5" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="18" type="stmt"/>
+        <line num="5" count="18" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="9" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
         <line num="14" count="7" type="stmt"/>
       </file>
       <file name="DomainErrorTranslator.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/DomainErrorTranslator.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="5" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="9" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
       </file>
       <file name="InvariantError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/InvariantError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
-        <line num="5" count="14" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
       </file>
       <file name="NotFoundError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/NotFoundError.js">
@@ -78,18 +78,18 @@
       <metrics statements="24" coveredstatements="24" conditionals="24" coveredconditionals="24" methods="4" coveredmethods="4"/>
       <file name="RegisterUser.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/RegisterUser.js">
         <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
-        <line num="3" count="13" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="13" count="13" type="cond" truecount="5" falsecount="0"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="13" count="14" type="cond" truecount="5" falsecount="0"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="17" count="11" type="cond" truecount="5" falsecount="0"/>
+        <line num="17" count="12" type="cond" truecount="5" falsecount="0"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="21" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="22" count="2" type="stmt"/>
-        <line num="25" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="26" count="2" type="stmt"/>
         <line num="31" count="4" type="stmt"/>
       </file>
@@ -114,9 +114,9 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
     </package>
@@ -130,10 +130,10 @@
         <line num="7" count="5" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
         <line num="25" count="3" type="stmt"/>
         <line num="26" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
@@ -160,17 +160,17 @@
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
       </file>
       <file name="index.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/users/index.js">
@@ -178,13 +178,13 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
       </file>
       <file name="routes.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/users/routes.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>

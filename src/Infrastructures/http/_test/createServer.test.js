@@ -126,5 +126,29 @@ describe('HTTP Server', () => {
       expect(responseJson.status).toEqual('fail');
       expect(responseJson.message).toEqual('cannot create new user: the username contains a prohibited character');
     });
+
+    it('should respond with a 400 status code when the requested username is already taken', async () => {
+      // Arrange
+      await UsersTableTestHelper.addUser({ username: 'alditaher' });
+      const requestPayload = {
+        username: 'alditaher',
+        password: 'alditaher007',
+        fullname: 'Aldi Taher',
+      };
+      const server = await createServer(container);
+
+      // Action
+      const response = await server.inject({
+        method: 'POST',
+        url: '/users',
+        payload: requestPayload,
+      });
+
+      // Assert
+      const responseJson = JSON.parse(response.payload);
+      expect(response.statusCode).toEqual(400);
+      expect(responseJson.status).toEqual('fail');
+      expect(responseJson.message).toEqual('username is not available');
+    });
   });
 });
