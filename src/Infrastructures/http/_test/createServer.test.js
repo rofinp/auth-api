@@ -12,6 +12,20 @@ describe('HTTP Server', () => {
     await pool.end();
   });
 
+  it('should response with a 404 status code when request to an unregistered route', async () => {
+    // Arrange
+    const server = await createServer({});
+
+    // Action
+    const response = await server.inject({
+      method: 'GET',
+      url: '/unregisteredRoute',
+    });
+
+    // Assert
+    expect(response.statusCode).toEqual(404);
+  });
+
   describe('when POST to path /users', () => {
     it('should respond with a 201 status code and persist the user', async () => {
       // Arrange

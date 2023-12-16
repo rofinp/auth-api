@@ -32,6 +32,11 @@ const createServer = async (container) => {
         return newResponse;
       }
 
+      // maintains client error handling by HAPI natively, such as 404, etc.
+      if (!translatedError.isServer) {
+        return res.continue;
+      }
+
       // server error handling as needed
       const newResponse = res.response({
         status: 'error',
