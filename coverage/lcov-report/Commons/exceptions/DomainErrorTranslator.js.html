@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Infrastructures/http/createServer.js</title>
+    <title>Code coverage report for Commons/exceptions/DomainErrorTranslator.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">Infrastructures/http</a> createServer.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">Commons/exceptions</a> DomainErrorTranslator.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -83,46 +83,46 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Hapi = require('@hapi/hapi');
-const users = require('../../Interfaces/http/api/users');
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const InvariantError = require('./InvariantError');
 &nbsp;
-const createServer = async (container) =&gt; {
-  const server = Hapi.server({
-    host: process.env.HOST,
-    port: process.env.PORT,
-  });
-&nbsp;
-  await server.register([
-    {
-      plugin: users,
-      options: { container },
-    },
-  ]);
-&nbsp;
-  return server;
+const DomainErrorTranslator = {
+  translate(error) {
+    return DomainErrorTranslator._directories[error.message] || error;
+  },
 };
 &nbsp;
-module.exports = createServer;
+DomainErrorTranslator._directories = {
+  'REGISTER_USER.IS_MISSING_REQUIRED_PROPERTY':
+    new InvariantError('cannot create new user: the required property does not exist'),
+  'REGISTER_USER.NOT_MEET_DATA_TYPE_SPECIFICATION':
+    new InvariantError('cannot create new user: the data type does not meet the specification'),
+  'REGISTER_USER.USERNAME_LIMIT_CHAR':
+    new InvariantError('cannot create new user: the username exceeds 50 characters'),
+  'REGISTER_USER.USERNAME_CONTAINS_RESTRICTED_CHARACTER':
+    new InvariantError('cannot create new user: the username contains a prohibited character'),
+};
+&nbsp;
+module.exports = DomainErrorTranslator;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

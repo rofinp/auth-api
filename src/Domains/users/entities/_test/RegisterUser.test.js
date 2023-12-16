@@ -9,7 +9,7 @@ describe('a RegisterUser entity', () => {
     };
 
     // Action & Assert
-    expect(() => new RegisterUser(payload)).toThrow('REGISTER_USER.NOT_CONTAIN_NEEDED_PROPERTY');
+    expect(() => new RegisterUser(payload)).toThrow('REGISTER_USER.IS_MISSING_REQUIRED_PROPERTY');
   });
 
   it('should throw an error when the payload does not meet the data type specification', () => {
