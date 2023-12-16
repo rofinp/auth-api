@@ -35,5 +35,27 @@ describe('HTTP Server', () => {
       expect(responseJson.status).toEqual('success');
       expect(responseJson.data.addedUser).toBeDefined();
     });
+
+    it('should respond with a 400 status code when the request payload is missing a required property', async () => {
+      // Arrange
+      const requestPayload = {
+        fullname: 'Aldi Taher',
+        password: 'alditaher007',
+      };
+      const server = await createServer(container);
+
+      // Action
+      const response = await server.inject({
+        method: 'POST',
+        url: '/users',
+        payload: requestPayload,
+      });
+
+      // Assert
+      const responseJson = JSON.parse(response.payload);
+      expect(response.statusCode).toEqual(400);
+      expect(responseJson.status).toEqual('fail');
+      expect(responseJson.message).toEqual('cannot create new user: the required property does not exist');
+    });
   });
 });
