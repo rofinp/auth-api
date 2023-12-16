@@ -150,5 +150,28 @@ describe('HTTP Server', () => {
       expect(responseJson.status).toEqual('fail');
       expect(responseJson.message).toEqual('username is not available');
     });
+
+    it('should handle server error correctly', async () => {
+      // Arrange
+      const requestPayload = {
+        username: 'alditaher',
+        password: 'alditaher007',
+        fullname: 'Aldi Taher',
+      };
+      const server = await createServer({}); // fake container
+
+      // Action
+      const response = await server.inject({
+        method: 'POST',
+        url: '/users',
+        payload: requestPayload,
+      });
+
+      // Assert
+      const responseJson = JSON.parse(response.payload);
+      expect(response.statusCode).toEqual(500);
+      expect(responseJson.status).toEqual('error');
+      expect(responseJson.message).toEqual('a failure occurred on our servers');
+    });
   });
 });
