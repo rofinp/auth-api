@@ -8,5 +8,7 @@ describe('UserRepository interface', () => {
     // Action & Assert
     await expect(userRepository.addUser({})).rejects.toThrow('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
     await expect(userRepository.verifyUsernameAvailability('')).rejects.toThrow('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    await expect(userRepository.getPassword('')).rejects.toThrow('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    await expect(userRepository.getId('')).rejects.toThrow('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   });
 });
