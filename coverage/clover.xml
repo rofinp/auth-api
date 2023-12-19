@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702797842110" clover="3.2.0">
-  <project timestamp="1702797842110" name="All files">
-    <metrics statements="121" coveredstatements="121" conditionals="38" coveredconditionals="38" methods="26" coveredmethods="26" elements="185" coveredelements="185" complexity="0" loc="121" ncloc="121" packages="9" files="16" classes="16"/>
+<coverage generated="1702979378862" clover="3.2.0">
+  <project timestamp="1702979378862" name="All files">
+    <metrics statements="130" coveredstatements="130" conditionals="46" coveredconditionals="46" methods="28" coveredmethods="28" elements="204" coveredelements="204" complexity="0" loc="130" ncloc="130" packages="10" files="17" classes="17"/>
     <package name="Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PasswordHash.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/security/PasswordHash.js">
@@ -63,6 +63,21 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Domains.authentications.entities">
+      <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <file name="Authentication.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/authentications/entities/Authentication.js">
+        <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Domains.users">
