@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702979378862" clover="3.2.0">
-  <project timestamp="1702979378862" name="All files">
-    <metrics statements="130" coveredstatements="130" conditionals="46" coveredconditionals="46" methods="28" coveredmethods="28" elements="204" coveredelements="204" complexity="0" loc="130" ncloc="130" packages="10" files="17" classes="17"/>
+<coverage generated="1702982291593" clover="3.2.0">
+  <project timestamp="1702982291593" name="All files">
+    <metrics statements="134" coveredstatements="134" conditionals="46" coveredconditionals="46" methods="31" coveredmethods="31" elements="211" coveredelements="211" complexity="0" loc="134" ncloc="134" packages="11" files="18" classes="18"/>
     <package name="Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PasswordHash.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/security/PasswordHash.js">
@@ -63,6 +63,16 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Domains.authentications">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="AuthRepository.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/authentications/AuthRepository.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Domains.authentications.entities">
