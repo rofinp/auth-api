@@ -19,7 +19,7 @@ describe('a LoginUser entity', () => {
     };
 
     // Action & Assert
-    expect(() => new LoginUser(payload)).toThrow('REGISTER_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
+    expect(() => new LoginUser(payload)).toThrow('LOGIN_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
   it('should create login user object correctly', () => {

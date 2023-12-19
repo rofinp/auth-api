@@ -12,7 +12,7 @@ class LoginUser {
     }
 
     if (typeof username !== 'string' || typeof password !== 'string') {
-      throw new Error('REGISTER_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
+      throw new Error('LOGIN_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
     }
   }
 }
