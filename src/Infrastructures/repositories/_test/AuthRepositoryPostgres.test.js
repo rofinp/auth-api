@@ -34,13 +34,13 @@ describe('AuthRepositoryPostgres', () => {
     });
   });
 
-  describe('verifyRefreshToken function', () => {
+  describe('checkRefreshToken function', () => {
     it('should throw InvariantError when the token is not available', async () => {
       // Arrange
       const authRepositoryPostgres = new AuthRepositoryPostgres(pool);
 
       // Action and Assert
-      await expect(() => authRepositoryPostgres.verifyRefreshToken('token')).rejects.toThrow(InvariantError);
+      await expect(() => authRepositoryPostgres.checkRefreshToken('token')).rejects.toThrow(InvariantError);
     });
 
     it('should not throw InvariantError when the token is available', async () => {
@@ -50,7 +50,7 @@ describe('AuthRepositoryPostgres', () => {
       await AuthenticationsTableTestHelper.addToken(token);
 
       // Action and Assert
-      await expect(authRepositoryPostgres.verifyRefreshToken(token))
+      await expect(authRepositoryPostgres.checkRefreshToken(token))
         .resolves.not.toThrow(InvariantError);
     });
   });

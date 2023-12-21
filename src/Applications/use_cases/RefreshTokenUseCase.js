@@ -1,3 +1,5 @@
+const RefreshToken = require('../../Domains/users/entities/RefreshToken');
+
 class RefreshTokenUseCase {
   constructor({ authRepository, tokenManager }) {
     this._authRepository = authRepository;
@@ -5,9 +7,9 @@ class RefreshTokenUseCase {
   }
 
   async execute(useCasePayload) {
-    const { refreshToken } = useCasePayload;
+    const { refreshToken } = new RefreshToken(useCasePayload);
     const { id } = await this._tokenManager.verifyRefreshToken(refreshToken);
-    await this._authRepository.checkTokenAvailability(refreshToken);
+    await this._authRepository.checkRefreshToken(refreshToken);
     const accessToken = await this._tokenManager.generateAccessToken({ id });
     return accessToken;
   }

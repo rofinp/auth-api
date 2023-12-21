@@ -1,5 +1,6 @@
 const pool = require('../../database/postgres/pool');
 const UsersTableTestHelper = require('../../../../tests/UsersTableTestHelper');
+const AuthenticationsTableTestHelper = require('../../../../tests/AuthenticationsTableTestHelper');
 const container = require('../../container');
 const createServer = require('../createServer');
 
@@ -69,7 +70,7 @@ describe('HTTP Server', () => {
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(400);
       expect(responseJson.status).toEqual('fail');
-      expect(responseJson.message).toEqual('cannot create new user: the required property does not exist');
+      expect(responseJson.message).toEqual('tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada');
     });
 
     it('should respond with a 400 status code when the request payload violates the data type specification', async () => {
@@ -92,7 +93,7 @@ describe('HTTP Server', () => {
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(400);
       expect(responseJson.status).toEqual('fail');
-      expect(responseJson.message).toEqual('cannot create new user: the data type does not meet the specification');
+      expect(responseJson.message).toEqual('tidak dapat membuat user baru karena tipe data tidak sesuai');
     });
 
     it('should respond with a 400 status code when the username exceeds 50 characters', async () => {
@@ -115,7 +116,7 @@ describe('HTTP Server', () => {
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(400);
       expect(responseJson.status).toEqual('fail');
-      expect(responseJson.message).toEqual('cannot create new user: the username exceeds 50 characters');
+      expect(responseJson.message).toEqual('tidak dapat membuat user baru karena karakter username melebihi batas limit');
     });
 
     it('should respond with a 400 status code when the username contains a prohibited character', async () => {
@@ -138,7 +139,7 @@ describe('HTTP Server', () => {
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(400);
       expect(responseJson.status).toEqual('fail');
-      expect(responseJson.message).toEqual('cannot create new user: the username contains a prohibited character');
+      expect(responseJson.message).toEqual('tidak dapat membuat user baru karena username mengandung karakter terlarang');
     });
 
     it('should respond with a 400 status code when the requested username is already taken', async () => {
@@ -162,7 +163,7 @@ describe('HTTP Server', () => {
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(400);
       expect(responseJson.status).toEqual('fail');
-      expect(responseJson.message).toEqual('username is not available');
+      expect(responseJson.message).toEqual('username tidak tersedia');
     });
 
     it('should handle server error correctly', async () => {

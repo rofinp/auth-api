@@ -1,11 +1,13 @@
+const LogoutUser = require('../../Domains/users/entities/LogoutUser');
+
 class LogoutUseCase {
   constructor({ authRepository }) {
     this._authRepository = authRepository;
   }
 
   async execute(useCasePayload) {
-    const { refreshToken } = useCasePayload;
-    await this._authRepository.checkTokenAvailability(refreshToken);
+    const { refreshToken } = new LogoutUser(useCasePayload);
+    await this._authRepository.checkRefreshToken(refreshToken);
     await this._authRepository.deleteRefreshToken(refreshToken);
   }
 }

@@ -7,7 +7,7 @@ describe('AuthRepository interface', () => {
 
     // Action & Assert
     expect(authRepository.addRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
-    expect(authRepository.verifyRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    expect(authRepository.checkRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
     expect(authRepository.deleteRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   });
 });

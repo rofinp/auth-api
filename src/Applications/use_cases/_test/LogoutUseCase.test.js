@@ -14,7 +14,7 @@ describe('LogoutUseCase', () => {
     /* mocking needed functions */
     mockAuthRepository.deleteRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve());
-    mockAuthRepository.checkTokenAvailability = jest.fn()
+    mockAuthRepository.checkRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve());
 
     /* creating use case instance */
@@ -26,7 +26,7 @@ describe('LogoutUseCase', () => {
     await logoutUseCase.execute(useCasePayload);
 
     // Assert
-    expect(mockAuthRepository.checkTokenAvailability)
+    expect(mockAuthRepository.checkRefreshToken)
       .toHaveBeenCalledWith(useCasePayload.refreshToken);
     expect(mockAuthRepository.deleteRefreshToken)
       .toHaveBeenCalledWith(useCasePayload.refreshToken);

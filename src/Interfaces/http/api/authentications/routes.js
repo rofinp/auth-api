@@ -12,7 +12,7 @@ const routes = (handler) => [
   {
     method: 'DELETE',
     path: '/authentications',
-    handler: (req, res) => handler.deleteAuthenticationHandler(req, res),
+    handler: (req) => handler.deleteAuthenticationHandler(req),
   },
 ];
 

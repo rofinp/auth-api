@@ -3,7 +3,7 @@ class AuthRepository {
     throw new Error('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   }
 
-  async verifyRefreshToken(token) {
+  async checkRefreshToken(token) {
     throw new Error('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   }
 

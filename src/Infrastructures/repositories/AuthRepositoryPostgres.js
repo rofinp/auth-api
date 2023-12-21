@@ -16,7 +16,7 @@ class AuthRepositoryPostgres extends AuthRepository {
     await this._pool.query(addTokenQuery);
   }
 
-  async verifyRefreshToken(token) {
+  async checkRefreshToken(token) {
     const verifyTokenQuery = {
       text: 'SELECT token FROM authentications WHERE token = $1',
       values: [token],
@@ -24,7 +24,7 @@ class AuthRepositoryPostgres extends AuthRepository {
 
     const result = await this._pool.query(verifyTokenQuery);
     if (!result.rowCount) {
-      throw new InvariantError('refresh token is not found');
+      throw new InvariantError('refresh token tidak ditemukan di database');
     }
   }
 
