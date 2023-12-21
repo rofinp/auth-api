@@ -6,7 +6,7 @@ const TokenManager = require('../../security/TokenManager');
 const LoginUseCase = require('../LoginUseCase');
 
 describe('LoginUseCase', () => {
-  it('should orchestrates the get authentication action correctly', async () => {
+  it('should orchestrates the authentication action correctly', async () => {
     // Arrange
     const useCasePayload = {
       username: 'alditaher',
@@ -31,9 +31,9 @@ describe('LoginUseCase', () => {
       .mockImplementation(() => Promise.resolve('user-123'));
     mockPasswordHash.compare = jest.fn()
       .mockImplementation(() => Promise.resolve());
-    mockTokenManager.createAccessToken = jest.fn()
+    mockTokenManager.generateAccessToken = jest.fn()
       .mockImplementation(() => Promise.resolve(expectedTokens.accessToken));
-    mockTokenManager.createRefreshToken = jest.fn()
+    mockTokenManager.generateRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve(expectedTokens.refreshToken));
     mockAuthRepository.addRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve());
@@ -47,15 +47,15 @@ describe('LoginUseCase', () => {
     });
 
     // Action
-    const authentication = await loginUseCase.execute(useCasePayload);
+    const authenticated = await loginUseCase.execute(useCasePayload);
 
     // Assert
-    expect(authentication).toEqual(expectedTokens);
+    expect(authenticated).toEqual(expectedTokens);
     expect(mockUserRepository.getPassword).toHaveBeenCalledWith(useCasePayload.username);
     expect(mockUserRepository.getId).toHaveBeenCalledWith(useCasePayload.username);
     expect(mockPasswordHash.compare).toHaveBeenCalledWith(useCasePayload.password, 'encrypted_password');
-    expect(mockTokenManager.createAccessToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
-    expect(mockTokenManager.createRefreshToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
+    expect(mockTokenManager.generateAccessToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
+    expect(mockTokenManager.generateRefreshToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
     expect(mockAuthRepository.addRefreshToken).toHaveBeenCalledWith(expectedTokens.refreshToken);
   });
 });

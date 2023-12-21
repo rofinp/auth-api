@@ -1,9 +1,9 @@
 class TokenManager {
-  async createAccessToken(payload) {
+  async generateAccessToken(payload) {
     throw new Error('TOKEN_MANAGER.METHOD_NOT_IMPLEMENTED');
   }
 
-  async createRefreshToken(payload) {
+  async generateRefreshToken(payload) {
     throw new Error('TOKEN_MANAGER.METHOD_NOT_IMPLEMENTED');
   }
 

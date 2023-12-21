@@ -13,12 +13,12 @@ class LoginUseCase {
 
   async execute(useCasePayload) {
     const { username, password } = new LoginUser(useCasePayload);
-    const getHashedPassword = await this._userRepository.getPassword(username);
-    await this._passwordHash.compare(password, getHashedPassword);
+    const hashedPassword = await this._userRepository.getPassword(username);
+    await this._passwordHash.compare(password, hashedPassword);
     const id = await this._userRepository.getId(username);
 
-    const accessToken = await this._tokenManager.createAccessToken({ username, id });
-    const refreshToken = await this._tokenManager.createRefreshToken({ username, id });
+    const accessToken = await this._tokenManager.generateAccessToken({ username, id });
+    const refreshToken = await this._tokenManager.generateRefreshToken({ username, id });
 
     const authentication = new Authentication({ accessToken, refreshToken });
     await this._authRepository.addRefreshToken(authentication.refreshToken);
