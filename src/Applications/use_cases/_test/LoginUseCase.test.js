@@ -51,11 +51,11 @@ describe('LoginUseCase', () => {
 
     // Assert
     expect(authenticated).toEqual(expectedTokens);
-    expect(mockUserRepository.getPassword).toHaveBeenCalledWith(useCasePayload.username);
-    expect(mockUserRepository.getId).toHaveBeenCalledWith(useCasePayload.username);
-    expect(mockPasswordHash.compare).toHaveBeenCalledWith(useCasePayload.password, 'encrypted_password');
-    expect(mockTokenManager.generateAccessToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
-    expect(mockTokenManager.generateRefreshToken).toHaveBeenCalledWith({ username: useCasePayload.username, id: 'user-123' });
-    expect(mockAuthRepository.addRefreshToken).toHaveBeenCalledWith(expectedTokens.refreshToken);
+    expect(mockUserRepository.getPassword).toHaveBeenCalledWith('alditaher');
+    expect(mockUserRepository.getId).toHaveBeenCalledWith('alditaher');
+    expect(mockPasswordHash.compare).toHaveBeenCalledWith('alditaher007', 'encrypted_password');
+    expect(mockTokenManager.generateAccessToken).toHaveBeenCalledWith({ username: 'alditaher', id: 'user-123' });
+    expect(mockTokenManager.generateRefreshToken).toHaveBeenCalledWith({ username: 'alditaher', id: 'user-123' });
+    expect(mockAuthRepository.addRefreshToken).toHaveBeenCalledWith('refresh_token');
   });
 });

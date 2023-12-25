@@ -1,7 +1,7 @@
 const RegisteredUser = require('../RegisteredUser');
 
 describe('a RegisteredUser entity', () => {
-  it('should throw an error when the payload does not contain the required properties', () => {
+  it('should throw an error when the payload does not contains the required properties', () => {
     // Arrange
     const payload = {
       username: 'alditaher',
@@ -17,7 +17,7 @@ describe('a RegisteredUser entity', () => {
     const payload = {
       id: 123,
       username: 'alditaher',
-      fullname: 'Aldi Taher',
+      fullname: {},
     };
 
     // Action & Assert

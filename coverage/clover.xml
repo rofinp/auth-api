@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1703165830726" clover="3.2.0">
-  <project timestamp="1703165830726" name="All files">
-    <metrics statements="254" coveredstatements="249" conditionals="66" coveredconditionals="66" methods="67" coveredmethods="67" elements="387" coveredelements="382" complexity="0" loc="254" ncloc="254" packages="12" files="30" classes="30"/>
+<coverage generated="1703514181394" clover="3.2.0">
+  <project timestamp="1703514181394" name="All files">
+    <metrics statements="267" coveredstatements="267" conditionals="72" coveredconditionals="72" methods="71" coveredmethods="71" elements="410" coveredelements="410" complexity="0" loc="267" ncloc="267" packages="12" files="30" classes="30"/>
     <package name="Applications.security">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="PasswordHash.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/security/PasswordHash.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
@@ -11,24 +11,25 @@
         <line num="11" count="6" type="stmt"/>
       </file>
       <file name="TokenManager.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/security/TokenManager.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
       </file>
     </package>
     <package name="Applications.use_cases">
-      <metrics statements="39" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="40" coveredstatements="40" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="AddUserUseCase.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/use_cases/AddUserUseCase.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="6" count="3" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
       </file>
       <file name="LoginUseCase.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/use_cases/LoginUseCase.js">
@@ -39,37 +40,38 @@
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
       </file>
       <file name="LogoutUseCase.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/use_cases/LogoutUseCase.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
       </file>
       <file name="RefreshTokenUseCase.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Applications/use_cases/RefreshTokenUseCase.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Commons.exceptions">
@@ -77,32 +79,32 @@
       <file name="AuthenticationError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/AuthenticationError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
       </file>
       <file name="ClientError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/ClientError.js">
         <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="3" count="43" type="stmt"/>
-        <line num="5" count="43" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="48" type="stmt"/>
+        <line num="5" count="48" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="9" count="42" type="stmt"/>
-        <line num="10" count="42" type="stmt"/>
+        <line num="9" count="47" type="stmt"/>
+        <line num="10" count="47" type="stmt"/>
         <line num="14" count="11" type="stmt"/>
       </file>
       <file name="DomainErrorTranslator.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/DomainErrorTranslator.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="5" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="27" type="cond" truecount="2" falsecount="0"/>
         <line num="9" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
       </file>
       <file name="InvariantError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/InvariantError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="39" type="stmt"/>
-        <line num="6" count="39" type="stmt"/>
+        <line num="5" count="43" type="stmt"/>
+        <line num="6" count="43" type="stmt"/>
         <line num="10" count="7" type="stmt"/>
       </file>
       <file name="NotFoundError.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Commons/exceptions/NotFoundError.js">
@@ -127,13 +129,13 @@
       <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
       <file name="Authentication.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/authentications/entities/Authentication.js">
         <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="12" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="12" count="7" type="cond" truecount="4" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="6" type="cond" truecount="4" falsecount="0"/>
         <line num="17" count="1" type="stmt"/>
         <line num="22" count="4" type="stmt"/>
       </file>
@@ -153,52 +155,52 @@
       <metrics statements="49" coveredstatements="49" conditionals="40" coveredconditionals="40" methods="10" coveredmethods="10"/>
       <file name="LoginUser.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/LoginUser.js">
         <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="10" count="4" type="cond" truecount="4" falsecount="0"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="14" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="10" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
         <line num="20" count="4" type="stmt"/>
       </file>
       <file name="LogoutUser.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/LogoutUser.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="2" type="stmt"/>
         <line num="19" count="4" type="stmt"/>
       </file>
       <file name="RefreshToken.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/RefreshToken.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="9" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="3" type="stmt"/>
-        <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="3" type="stmt"/>
         <line num="19" count="4" type="stmt"/>
       </file>
       <file name="RegisterUser.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Domains/users/entities/RegisterUser.js">
         <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
-        <line num="3" count="17" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="9" count="9" type="stmt"/>
-        <line num="13" count="17" type="cond" truecount="5" falsecount="0"/>
+        <line num="3" count="18" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="13" count="18" type="cond" truecount="5" falsecount="0"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="17" count="15" type="cond" truecount="5" falsecount="0"/>
+        <line num="17" count="16" type="cond" truecount="5" falsecount="0"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="21" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="14" type="cond" truecount="2" falsecount="0"/>
         <line num="22" count="2" type="stmt"/>
-        <line num="25" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="26" count="2" type="stmt"/>
         <line num="31" count="5" type="stmt"/>
       </file>
@@ -226,115 +228,126 @@
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="8" count="20" type="stmt"/>
-        <line num="13" count="20" type="stmt"/>
-        <line num="24" count="20" type="stmt"/>
-        <line num="25" count="23" type="stmt"/>
-        <line num="26" count="23" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="19" type="stmt"/>
-        <line num="31" count="19" type="cond" truecount="2" falsecount="0"/>
-        <line num="32" count="9" type="stmt"/>
-        <line num="36" count="9" type="stmt"/>
-        <line num="37" count="9" type="stmt"/>
-        <line num="41" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+        <line num="24" count="22" type="stmt"/>
+        <line num="25" count="28" type="stmt"/>
+        <line num="26" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="31" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="14" type="stmt"/>
+        <line num="36" count="14" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+        <line num="41" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="42" count="1" type="stmt"/>
-        <line num="46" count="9" type="stmt"/>
-        <line num="50" count="9" type="stmt"/>
-        <line num="51" count="9" type="stmt"/>
-        <line num="55" count="4" type="stmt"/>
-        <line num="58" count="20" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="55" count="10" type="stmt"/>
+        <line num="58" count="22" type="stmt"/>
         <line num="61" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Infrastructures.repositories">
-      <metrics statements="29" coveredstatements="29" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <metrics statements="40" coveredstatements="40" conditionals="10" coveredconditionals="10" methods="9" coveredmethods="9"/>
       <file name="AuthRepositoryPostgres.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Infrastructures/repositories/AuthRepositoryPostgres.js">
-        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="cond" truecount="4" falsecount="0"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
         <line num="41" count="3" type="stmt"/>
       </file>
       <file name="UserRepositoryPostgres.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Infrastructures/repositories/UserRepositoryPostgres.js">
-        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <metrics statements="27" coveredstatements="27" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="18" count="7" type="stmt"/>
-        <line num="19" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="2" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
         <line num="25" count="6" type="stmt"/>
-        <line num="26" count="6" type="stmt"/>
-        <line num="28" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
         <line num="34" count="6" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="45" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="60" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="70" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Infrastructures.security">
-      <metrics statements="23" coveredstatements="23" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+      <metrics statements="23" coveredstatements="23" conditionals="3" coveredconditionals="3" methods="8" coveredmethods="8"/>
       <file name="BcryptPasswordHash.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Infrastructures/security/BcryptPasswordHash.js">
         <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="24" count="3" type="stmt"/>
       </file>
       <file name="JwtTokenManager.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Infrastructures/security/JwtTokenManager.js">
-        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Interfaces.http.api.authentications">
-      <metrics statements="26" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
       <file name="handler.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/authentications/handler.js">
-        <metrics statements="16" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="7" count="20" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
         <line num="42" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/authentications/index.js">
@@ -342,15 +355,15 @@
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="7" count="20" type="stmt"/>
-        <line num="8" count="20" type="stmt"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
       </file>
       <file name="routes.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/authentications/routes.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="1" count="20" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
+        <line num="1" count="22" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
       </file>
     </package>
@@ -359,12 +372,12 @@
       <file name="handler.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/users/handler.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
-        <line num="5" count="20" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="10" count="9" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="5" count="22" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/users/index.js">
@@ -372,13 +385,13 @@
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="7" count="20" type="stmt"/>
-        <line num="8" count="20" type="stmt"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
       </file>
       <file name="routes.js" path="/home/rofinugraha/my-node-projects/auth-api/src/Interfaces/http/api/users/routes.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="20" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
+        <line num="1" count="22" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
       </file>
     </package>

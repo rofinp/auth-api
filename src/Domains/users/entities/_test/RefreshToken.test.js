@@ -1,7 +1,7 @@
 const RefreshToken = require('../RefreshToken');
 
 describe('a RefreshToken entity', () => {
-  it('should throw an error when payload did not contain needed properties', () => {
+  it('should throw an error when the payload does not contains required properties', () => {
     // Arrange
     const payload = {};
 
@@ -19,7 +19,7 @@ describe('a RefreshToken entity', () => {
     expect(() => new RefreshToken(payload)).toThrow('REFRESH_TOKEN.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
-  it('should create refresh token object correctly', () => {
+  it('should create a refresh token object correctly', () => {
     // Arrange
     const payload = {
       refreshToken: 'refresh_token',

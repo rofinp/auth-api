@@ -5,7 +5,7 @@ const UsersTableTestHelper = {
   async addUser({
     id = 'user-123',
     username = 'alditaher',
-    password = 'alamak',
+    password = 'alditaher007',
     fullname = 'Aldi Taher',
   }) {
     const query = {

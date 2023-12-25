@@ -1,7 +1,7 @@
 const RegisterUser = require('../RegisterUser');
 
 describe('a RegisterUser entity', () => {
-  it('should throw an error when payload did not contain needed properties', () => {
+  it('should throw an error when the payload does not contains the required properties', () => {
     // Arrange
     const payload = {
       username: 'abc',
@@ -24,7 +24,7 @@ describe('a RegisterUser entity', () => {
     expect(() => new RegisterUser(payload)).toThrow('REGISTER_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
-  it('should throw an error when username contains more than 50 characters', () => {
+  it('should throw an error when the username contains more than 50 characters', () => {
     // Arrange
     const payload = {
       username: 'alditaheralditaheralditaheralditaheralditaheralditaher',
@@ -36,7 +36,7 @@ describe('a RegisterUser entity', () => {
     expect(() => new RegisterUser(payload)).toThrow('REGISTER_USER.USERNAME_LIMIT_CHAR');
   });
 
-  it('should throw an error when username contains restricted characters', () => {
+  it('should throw an error when the username contains restricted characters', () => {
     // Arrange
     const payload = {
       username: 'aldi taher',

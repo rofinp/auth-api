@@ -1,7 +1,7 @@
 const LogoutUser = require('../LogoutUser');
 
 describe('a LogoutUser entity', () => {
-  it('should throw an error when payload did not contain needed properties', () => {
+  it('should throw an error when the payload does not contains required properties', () => {
     // Arrange
     const payload = {};
 
@@ -19,7 +19,7 @@ describe('a LogoutUser entity', () => {
     expect(() => new LogoutUser(payload)).toThrow('LOGOUT_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
-  it('should logout user object correctly', () => {
+  it('should create a logoutUser object correctly', () => {
     // Arrange
     const payload = {
       refreshToken: 'refresh_token',

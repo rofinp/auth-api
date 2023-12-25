@@ -5,13 +5,15 @@ const TokenManager = require('../../../Applications/security/TokenManager');
 
 describe('Jwt Token', () => {
   it('should be instance of TokenManager', () => {
-    expect(new JwtTokenManager()).toBeInstanceOf(TokenManager);
+    const jwtTokenManager = new JwtTokenManager(Jwt.token);
+    expect(jwtTokenManager).toBeInstanceOf(TokenManager);
   });
-  describe('Generate Access Token function', () => {
+
+  describe('Test Generate Access Token Function', () => {
     it('should generate access token correctly', async () => {
       // Arrange
       const payload = {
-        id: 'user-123',
+        username: 'alditaher',
       };
       const spyGenerateAccessToken = jest.spyOn(Jwt.token, 'generate');
       const jwtTokenManager = new JwtTokenManager(Jwt.token);
@@ -26,11 +28,11 @@ describe('Jwt Token', () => {
     });
   });
 
-  describe('Generate Refresh Token', () => {
+  describe('Test Generate Refresh Token Function', () => {
     it('should generate refresh token correctly', async () => {
       // Arrange
       const payload = {
-        id: 'user-123',
+        username: 'alditaher',
       };
       const spyGenerateRefreshToken = jest.spyOn(Jwt.token, 'generate');
       const jwtTokenManager = new JwtTokenManager(Jwt.token);
@@ -46,25 +48,42 @@ describe('Jwt Token', () => {
     });
   });
 
-  describe('verifyRefreshToken', () => {
-    it('should throw InvariantError when verification failed', async () => {
+  describe('Test Verify Refresh Token Function', () => {
+    it('should throw an InvariantError when verification access token failed', async () => {
       // Arrange
       const jwtTokenManager = new JwtTokenManager(Jwt.token);
-      const AccesssToken = jwtTokenManager.generateAccessToken({ id: 'user-123' });
+      const accessToken = jwtTokenManager.generateAccessToken({ username: 'alditaher', id: 'user-123' });
 
       // Action & Assert
-      await expect(() => jwtTokenManager.verifyRefreshToken(AccesssToken))
+      await expect(jwtTokenManager.verifyRefreshToken(accessToken))
         .rejects.toThrow(InvariantError);
     });
 
-    it('should not throw InvariantError if verification refresh token success', async () => {
+    it('should not throw an InvariantError when verification refresh token success', async () => {
       // Arrange
       const jwtTokenManager = new JwtTokenManager(Jwt.token);
-      const refreshToken = await jwtTokenManager.generateRefreshToken({ id: 'user-123' });
+      const refreshToken = await jwtTokenManager.generateRefreshToken({ username: 'alditaher', id: 'user-123' });
 
       // Action & Assert
       await expect(jwtTokenManager.verifyRefreshToken(refreshToken))
         .resolves.not.toThrow(InvariantError);
+    });
+  });
+
+  describe('Test Decode Payload Function', () => {
+    it('should decode payload correctly', async () => {
+      // Arrange
+      const jwtTokenManager = new JwtTokenManager(Jwt.token);
+      const accessToken = await jwtTokenManager
+        .generateAccessToken({ username: 'alditaher', id: 'user-123' });
+
+      // Action
+      const { username: expectedUsername, id: expectedId } = await jwtTokenManager
+        .decodePayload(accessToken);
+
+      // Assert
+      expect(expectedUsername).toEqual('alditaher');
+      expect(expectedId).toEqual('user-123');
     });
   });
 });

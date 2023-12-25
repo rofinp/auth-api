@@ -1,6 +1,5 @@
 const pool = require('../../database/postgres/pool');
 const UsersTableTestHelper = require('../../../../tests/UsersTableTestHelper');
-const AuthenticationsTableTestHelper = require('../../../../tests/AuthenticationsTableTestHelper');
 const container = require('../../container');
 const createServer = require('../createServer');
 
@@ -35,6 +34,7 @@ describe('HTTP Server', () => {
         password: 'alditaher007',
         fullname: 'Aldi Taher',
       };
+
       const server = await createServer(container);
 
       // Action
@@ -54,8 +54,8 @@ describe('HTTP Server', () => {
     it('should respond with a 400 status code when the request payload is missing a required property', async () => {
       // Arrange
       const requestPayload = {
-        fullname: 'Aldi Taher',
         password: 'alditaher007',
+        fullname: 'Aldi Taher',
       };
       const server = await createServer(container);
 
@@ -80,6 +80,7 @@ describe('HTTP Server', () => {
         password: 'alditaher007',
         fullname: ['Aldi Taher'],
       };
+
       const server = await createServer(container);
 
       // Action
@@ -122,7 +123,7 @@ describe('HTTP Server', () => {
     it('should respond with a 400 status code when the username contains a prohibited character', async () => {
       // Arrange
       const requestPayload = {
-        username: '~alditaher~',
+        username: 'aldi taher',
         password: 'alditaher007',
         fullname: 'Aldi Taher',
       };
@@ -150,6 +151,7 @@ describe('HTTP Server', () => {
         password: 'alditaher007',
         fullname: 'Aldi Taher',
       };
+
       const server = await createServer(container);
 
       // Action

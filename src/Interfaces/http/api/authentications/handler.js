@@ -9,7 +9,7 @@ class AuthenticationsHandler {
 
   async postAuthenticationHandler(req, res) {
     const loginUseCase = this._container.getInstance(LoginUseCase.name);
-    const { accessToken, refreshToken } = await loginUseCase.execute(req.paylaod);
+    const { accessToken, refreshToken } = await loginUseCase.execute(req.payload);
     const response = res.response({
       status: 'success',
       message: 'authentications successfully generated',

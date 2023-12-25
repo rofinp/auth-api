@@ -2,7 +2,7 @@ const LogoutUseCase = require('../LogoutUseCase');
 const AuthRepository = require('../../../Domains/authentications/AuthRepository');
 
 describe('LogoutUseCase', () => {
-  it('should orchestrates the delete authentication action correctly', async () => {
+  it('should orchestrates the delete action correctly', async () => {
     // Arrange
     const useCasePayload = {
       refreshToken: 'refresh_token',
@@ -12,9 +12,9 @@ describe('LogoutUseCase', () => {
     const mockAuthRepository = new AuthRepository();
 
     /* mocking needed functions */
-    mockAuthRepository.deleteRefreshToken = jest.fn()
-      .mockImplementation(() => Promise.resolve());
     mockAuthRepository.checkRefreshToken = jest.fn()
+      .mockImplementation(() => Promise.resolve());
+    mockAuthRepository.deleteRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve());
 
     /* creating use case instance */

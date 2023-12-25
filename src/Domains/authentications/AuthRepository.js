@@ -1,13 +1,13 @@
 class AuthRepository {
-  async addRefreshToken(token) {
+  async addRefreshToken(refreshToken) {
     throw new Error('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   }
 
-  async checkRefreshToken(token) {
+  async checkRefreshToken(refreshToken) {
     throw new Error('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   }
 
-  async deleteRefreshToken(token) {
+  async deleteRefreshToken(refreshToken) {
     throw new Error('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   }
 }

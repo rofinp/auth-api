@@ -6,8 +6,8 @@ describe('AuthRepository interface', () => {
     const authRepository = new AuthRepository();
 
     // Action & Assert
-    expect(authRepository.addRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
-    expect(authRepository.checkRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
-    expect(authRepository.deleteRefreshToken('')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    expect(authRepository.addRefreshToken('refresh_token')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    expect(authRepository.checkRefreshToken('refresh_token')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
+    expect(authRepository.deleteRefreshToken('refresh_token')).rejects.toThrow('AUTH_REPOSITORY.METHOD_NOT_IMPLEMENTED');
   });
 });

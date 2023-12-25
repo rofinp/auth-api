@@ -3,15 +3,13 @@ const AuthRepository = require('../../../Domains/authentications/AuthRepository'
 const TokenManager = require('../../security/TokenManager');
 
 describe('RefreshTokenUseCase', () => {
-  it('should throw error if use case payload not contain refresh token', async () => {
+  it('should throw an error when RefreshTokenUseCase payload is not contains refresh token', async () => {
     // Arrange
     const useCasePayload = {};
-
-    // Action
     const refreshTokenUseCase = new RefreshTokenUseCase({});
 
-    // Assert
-    await expect(() => refreshTokenUseCase.execute(useCasePayload)).rejects.toThrow('REFRESH_TOKEN.IS_MISSING_REQUIRED_PROPERTY');
+    // Action & Assert
+    await expect(refreshTokenUseCase.execute(useCasePayload)).rejects.toThrow('REFRESH_TOKEN.IS_MISSING_REQUIRED_PROPERTY');
   });
 
   it('should throw error if use case payload not meet data type specification', async () => {
@@ -22,9 +20,9 @@ describe('RefreshTokenUseCase', () => {
     const refreshTokenUseCase = new RefreshTokenUseCase({});
 
     // Assert
-    await expect(() => refreshTokenUseCase.execute(useCasePayload)).rejects.toThrow('REFRESH_TOKEN.NOT_MEET_DATA_TYPE_SPECIFICATION');
+    await expect(refreshTokenUseCase.execute(useCasePayload)).rejects.toThrow('REFRESH_TOKEN.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
-  it('should orchestrates the refresh authentication action correctly', async () => {
+  it('should orchestrates the refresh token action correctly', async () => {
     // Arrange
     const useCasePayload = {
       refreshToken: 'refresh_token',
@@ -38,9 +36,11 @@ describe('RefreshTokenUseCase', () => {
     mockAuthRepository.checkRefreshToken = jest.fn()
       .mockImplementation(() => Promise.resolve());
     mockTokenManager.verifyRefreshToken = jest.fn()
-      .mockImplementation(() => Promise.resolve({ id: 'user-123' }));
+      .mockImplementation(() => Promise.resolve());
     mockTokenManager.generateAccessToken = jest.fn()
       .mockImplementation(() => Promise.resolve('new_access_token'));
+    mockTokenManager.decodePayload = jest.fn()
+      .mockImplementation(() => Promise.resolve({ username: 'alditaher', id: 'user-123' }));
 
     /* creating use case instance */
     const refreshTokenUseCase = new RefreshTokenUseCase({
@@ -59,6 +59,8 @@ describe('RefreshTokenUseCase', () => {
     expect(mockTokenManager.verifyRefreshToken)
       .toHaveBeenCalledWith(useCasePayload.refreshToken);
     expect(mockTokenManager.generateAccessToken)
-      .toHaveBeenCalledWith({ id: 'user-123' });
+      .toHaveBeenCalledWith({ username: 'alditaher', id: 'user-123' });
+    expect(mockTokenManager.decodePayload)
+      .toHaveBeenCalledWith(useCasePayload.refreshToken);
   });
 });

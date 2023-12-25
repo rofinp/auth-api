@@ -10,6 +10,10 @@ class TokenManager {
   async verifyRefreshToken(refreshToken) {
     throw new Error('TOKEN_MANAGER.METHOD_NOT_IMPLEMENTED');
   }
+
+  async decodePayload(refreshToken) {
+    throw new Error('TOKEN_MANAGER.METHOD_NOT_IMPLEMENTED');
+  }
 }
 
 module.exports = TokenManager;

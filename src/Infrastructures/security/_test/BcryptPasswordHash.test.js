@@ -1,10 +1,16 @@
 const bcrypt = require('bcrypt');
 const BcryptPasswordHash = require('../BcryptPasswordHash');
 const AuthenticationError = require('../../../Commons/exceptions/AuthenticationError');
+const PasswordHash = require('../../../Applications/security/PasswordHash');
 
 describe('BcryptPasswordHash', () => {
-  describe('hash function', () => {
-    it('should encrypt password correctly', async () => {
+  it('should be instance of PasswordHash', () => {
+    const bcryptPasswordHash = new BcryptPasswordHash(bcrypt);
+    expect(bcryptPasswordHash).toBeInstanceOf(PasswordHash);
+  });
+
+  describe('test hash function', () => {
+    it('should encrypt the password correctly', async () => {
       // Arrange
       const spyHash = jest.spyOn(bcrypt, 'hash');
       const bcryptPasswordHash = new BcryptPasswordHash(bcrypt);
@@ -19,8 +25,8 @@ describe('BcryptPasswordHash', () => {
     });
   });
 
-  describe('compare password', () => {
-    it('should throw AuthenticationError when password does not match', async () => {
+  describe('test compare password function', () => {
+    it('should throw an AuthenticationError when the password does not match', async () => {
       // Arrange
       const bcryptPasswordHash = new BcryptPasswordHash(bcrypt);
       const password = 'plain_password';
@@ -31,7 +37,7 @@ describe('BcryptPasswordHash', () => {
         .rejects.toThrow(AuthenticationError);
     });
 
-    it('should not throw an AuthenticationError when password match', async () => {
+    it('should not throw an AuthenticationError when the password match', async () => {
       // Arrange
       const spyCompare = jest.spyOn(bcrypt, 'compare');
       const bcryptPasswordHash = new BcryptPasswordHash(bcrypt);

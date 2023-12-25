@@ -1,7 +1,7 @@
 const LoginUser = require('../LoginUser');
 
 describe('a LoginUser entity', () => {
-  it('should throw an error when payload did not contain needed properties', () => {
+  it('should throw an error when the payload does not contains required properties', () => {
     // Arrange
     const payload = {
       username: 'alditaher',
@@ -14,15 +14,15 @@ describe('a LoginUser entity', () => {
   it('should throw an error when the payload does not meet the data type specification', () => {
     // Arrange
     const payload = {
-      username: {},
-      password: true,
+      username: 'alditaher',
+      password: {},
     };
 
     // Action & Assert
     expect(() => new LoginUser(payload)).toThrow('LOGIN_USER.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
-  it('should create login user object correctly', () => {
+  it('should create a loginUser object correctly', () => {
     // Arrange
     const payload = {
       username: 'alditaher',

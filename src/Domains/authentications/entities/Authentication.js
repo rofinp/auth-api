@@ -10,7 +10,7 @@ class Authentication {
 
   _verifyTokenPayload({ accessToken, refreshToken }) {
     if (!accessToken || !refreshToken) {
-      throw new Error('AUTHENTICATION.MISSING_REQUIRED_PROPERTY');
+      throw new Error('AUTHENTICATION.IS_MISSING_REQUIRED_PROPERTY');
     }
 
     if (typeof accessToken !== 'string' || typeof refreshToken !== 'string') {

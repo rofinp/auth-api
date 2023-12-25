@@ -1,20 +1,20 @@
 const Authentication = require('../Authentication');
 
 describe('an Authentication entity', () => {
-  it('should throw an error when payload did not contain needed properties', () => {
+  it('should throw an error when the payload did not contains required properties', () => {
     // Arrange
     const payload = {
       accessToken: 'valid_access_token',
     };
 
     // Action & Assert
-    expect(() => new Authentication(payload)).toThrow('AUTHENTICATION.MISSING_REQUIRED_PROPERTY');
+    expect(() => new Authentication(payload)).toThrow('AUTHENTICATION.IS_MISSING_REQUIRED_PROPERTY');
   });
 
   it('should throw an error when the payload does not meet the data type specification', () => {
     // Arrange
     const payload = {
-      accessToken: [123],
+      accessToken: 'access_token',
       refreshToken: {},
     };
 
@@ -22,7 +22,7 @@ describe('an Authentication entity', () => {
     expect(() => new Authentication(payload)).toThrow('AUTHENTICATION.NOT_MEET_DATA_TYPE_SPECIFICATION');
   });
 
-  it('should create Authentication object correctly', () => {
+  it('should create an Authentication object correctly', () => {
     // Arrange
     const payload = {
       accessToken: 'access_token',
